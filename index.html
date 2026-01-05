@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quang Truong Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="style3.css">
+</head>
+
+<body>
+
+<header data-component-theme="portalThemeColor8"
+  class="row sectionBlockLayout"
+  style="padding: 8px; margin: 0; display: flex; min-height: 60px; background-color: rgb(52, 58, 64); position: sticky; top: 0; z-index: 999;">
+
+  <div class="container-custom"
+       style="display: flex; align-items: center; justify-content: space-between; padding: 8px 24px;">
+
+    <!-- LOGO / HOME (BÊN TRÁI) -->
+    <button onclick="smoothScroll('home')"
+            aria-label="Home"
+            style="
+              background: none;
+              border: none;
+              cursor: pointer;
+              padding: 0;
+              display: flex;
+              align-items: center;
+            ">
+      <img src="https://i.ibb.co/DZYcDk0/IMG-20260105-113205.jpg"
+           alt="Logo"
+           style="
+             height: 40px;
+             width: auto;
+             object-fit: cover;
+             border-radius: 50%;
+           ">
+    </button>
+
+    <!-- MENU (BÊN PHẢI) -->
+    <div style="display: flex; align-items: center;">
+      <button onclick="smoothScroll('mySkills')" class="button1"
+        style="margin: 0 15px; color: white; background: none; border: none; cursor: pointer;">
+        Skills
+      </button>
+
+      <button onclick="smoothScroll('myProjects')" class="button1"
+        style="margin: 0 15px; color: white; background: none; border: none; cursor: pointer;">
+        Projects
+      </button>
+
+      <button onclick="smoothScroll('aboutMe')" class="button1"
+        style="margin: 0 15px; color: white; background: none; border: none; cursor: pointer;">
+        About Me
+      </button>
+
+      <button onclick="smoothScroll('contactMe')" class="button1"
+        style="margin: 0 15px; color: white; background: none; border: none; cursor: pointer;">
+        Contact Me
+      </button>
+    </div>
+
+  </div>
+</header>
+
+<div class="side-arrows"
+     style="
+       position: fixed;
+       top: 50vh;
+       left: 0;
+       width: 100%;
+       transform: translateY(-50%);
+       display: flex;
+       justify-content: space-between;
+       z-index: 9999;
+       pointer-events: none;
+     ">
+
+  <button class="side-arrow left"
+          style="
+            pointer-events: auto;
+            background: rgba(0,0,0,0.6);
+            color: white;
+            border: none;
+            font-size: 30px;
+            width: 54px;
+            height: 54px;
+            border-radius: 50%;
+            cursor: pointer;
+            margin-left: 16px;
+
+            opacity: 0.35;
+            transition: opacity 0.25s ease, transform 0.25s ease;
+          "
+          onmouseenter="this.style.opacity=1; this.style.transform='scale(2.0)'"
+          onmouseleave="this.style.opacity=0.35; this.style.transform='scale(1)'"
+          onclick="prevSection()">❮</button>
+
+  <button class="side-arrow right"
+          style="
+            pointer-events: auto;
+            background: rgba(0,0,0,0.6);
+            color: white;
+            border: none;
+            font-size: 30px;
+            width: 54px;
+            height: 54px;
+            border-radius: 50%;
+            cursor: pointer;
+            margin-right: 16px;
+
+            opacity: 0.35;
+            transition: opacity 0.25s ease, transform 0.25s ease;
+          "
+          onmouseenter="this.style.opacity=1; this.style.transform='scale(2.0)'"
+          onmouseleave="this.style.opacity=0.35; this.style.transform='scale(1)'"
+          onclick="nextSection()">❯</button>
+
+</div>
+
+<div id="horizontalContainer">
+  <section id="home" class="home-section pages-section">
+    <div data-component-theme="portalThemeColor8" class="row sectionBlockLayout"
+      style='padding: 8px; margin: 0px; display: flex; flex-wrap: wrap; min-height: 60vh; background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://cdn.hubblecontent.osi.office.net/m365content/publish/2106a533-e13d-4194-b673-d418783394f3/thumbnails/xxlarge.jpg"); background-position: center center; background-repeat: no-repeat; background-size: cover;'>
+      <div class="container">
+        <div class="col-md-12 columnBlockLayout"
+          style="min-width: 250px; flex-grow: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; margin: 100px 0px;">
+          <h1 style="text-align: center;">Hi, I'm Quang Truong</h1>
+          <h4 style="text-align: center;">Learning, building, and applying technology to real-world solutions</h4>
+          <p style="text-align: center;">Welcome to my personal portfolio, where I share my skills, projects, and experiences</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="mySkills" class="skills-section pages-section">
+    <h2 class="skills-title">My Skills</h2>
+
+    <div class="skills-grid">
+      <!-- Frontend -->
+      <div class="skill-card">
+        <h3>Frontend</h3>
+        <div class="skill-items">
+          <div class="skill-item">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" />
+            <span>HTML5</span>
+          </div>
+          <div class="skill-item">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" />
+            <span>CSS3</span>
+          </div>
+          <div class="skill-item">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
+            <span>JavaScript</span>
+          </div>
+          <div class="skill-item">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" />
+            <span>React</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Backend -->
+      <div class="skill-card">
+        <h3>Backend</h3>
+        <div class="skill-items">
+          <div class="skill-item">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" />
+            <span>Node.js</span>
+          </div>
+          <div class="skill-item">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" />
+            <span>Python</span>
+          </div>
+          <div class="skill-item">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" />
+            <span>Java</span>
+          </div>
+          <div class="skill-item">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ruby/ruby-original.svg" />
+            <span>Ruby</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Database -->
+      <div class="skill-card">
+        <h3>Database</h3>
+        <div class="skill-items">
+          <div class="skill-item">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" />
+            <span>MySQL</span>
+          </div>
+          <div class="skill-item">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" />
+            <span>PostgreSQL</span>
+          </div>
+          <div class="skill-item">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" />
+            <span>MongoDB</span>
+          </div>
+          <div class="skill-item">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" />
+            <span>Redis</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Platform & Deployment -->
+      <div class="skill-card">
+        <h3>Platform & Deployment</h3>
+        <div class="skill-items">
+
+          <div class="skill-item">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" />
+            <span>Git</span>
+          </div>
+
+          <div class="skill-item">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vercel/vercel-original.svg" alt="Vercel" />
+            <span>Vercel</span>
+          </div>
+
+          <div class="skill-item">
+            <img src="https://findstack.com/cdn-cgi/image/format=auto,fit=contain,width=120,height=120,quality=90/https://assets.findstack.com/hf8tetz6wrjfxx6vxooc6igw3tah" alt="Render" />
+            <span>Render</span>
+          </div>
+
+          <div class="skill-item">
+            <img src="https://cdn-1.webcatalog.io/catalog/microsoft-power-pages/microsoft-power-pages-icon-filled-256.webp?v=1716619128601" alt="Power Pages" />
+            <span>Power Pages</span>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div id="myProjects" class="row sectionBlockLayout project-section pages-section">
+    <div class="container">
+      <h2 class="section-title">My Projects</h2>
+
+      <div class="project-grid">
+
+        <!-- Project 1 -->
+        <div class="project-card">
+          <img src="https://i.ibb.co/2YSXRJjQ/Screenshot-343.png"
+            alt="Anime Tango Website" />
+          <h3><br>Anime Tango</h3>
+          <p>
+            An online anime streaming website where users can watch anime, leave comments, mark favorites, and receive personalized anime recommendations.
+          </p>
+          <div class="project-links">
+            <a href="https://github.com/22026536/animetango" target="_blank">GitHub</a>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card">
+          <img src="https://i.ibb.co/ymdyMgJx/Screenshot-617.png"
+            alt="Online Movie Ticket Booking Website" />
+          <h3>Online Movie Ticket Booking Website</h3>
+          <p>
+            An online cinema ticket booking platform with seat selection, online payment, and AI-based movie recommendations.
+          </p>
+          <div class="project-links">
+            <a href="https://github.com/22026536/fall2024c8g13" target="_blank">GitHub</a>
+          </div>
+        </div>
+        <!-- Project 3 -->
+        <div class="project-card">
+          <img src="https://i.ibb.co/Mxb2cynm/Screenshot-618.png"
+            alt="Online Furniture Shopping Website" />
+          <h3><br>Online Furniture Shopping Website</h3>
+          <p>
+            An online furniture shopping website where users can browse products, view detailed information, leave reviews, and purchase furniture online.
+          </p>
+          <div class="project-links">
+            <a href="https://github.com/TDThuyen/web-project" target="_blank">GitHub</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="aboutMe" class="row sectionBlockLayout pages-section"
+    style="margin: 0px; display: flex; flex-wrap: wrap; min-height: auto; padding: 0px 0px;">
+    <div class="container">
+      <div class="col-md-8 columnBlockLayout"
+        style="min-width: 250px; flex-grow: 1; display: flex; flex-direction: column; padding: 30px;">
+        <h2>About Me</h2>
+        <p>My name is Truong Duc Quang, and I am a fourth-year university student majoring in Information Technology.</p>
+        <p>I have experience in web development and have worked on several practical projects during my studies.</p>
+        <p>I enjoy learning through hands-on work and applying my knowledge to build real-world solutions. I am motivated to continuously improve myself and gain professional experience in a real working environment.</p>
+      </div>
+      <div class="col-md-4 columnBlockLayout"
+        style="min-width: 250px; flex-grow: 1; display: flex; flex-direction: column; padding: 30px;"><img
+          alt="My picture"
+          src="https://i.ibb.co/VZXNDnf/IMG-20260105-113350.jpg"
+          style="max-width: 100%; width: 100%; height: auto; border-radius: 8px;" /></div>
+    </div>
+  </div>
+
+  <div id="contactMe" class="row sectionBlockLayout pages-section"
+    style="margin: 0px; display: flex; flex-wrap: wrap; min-height: auto; padding: 0px 0px; background-color: rgb(248, 249, 250);">
+    <div class="container">
+      <div class="col-md-12 columnBlockLayout"
+        style="min-width: 250px; flex-grow: 1; display: flex; flex-direction: column; padding: 30px;">
+        <h2>Contact Me</h2>
+        <p>If you have a project or any questions, please feel free to contact me via the email address or phone number below. I look forward to the opportunity to collaborate and connect with you.</p>
+        <p>Email: truongducquangk6@gmail.com</p>
+        <p>Phone: +84 0376784220</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const sections = ["home", "mySkills", "myProjects", "aboutMe", "contactMe"];
+  let currentIndex = 0;
+
+  function goToSection(index) {
+    if (index < 0 || index >= sections.length) return;
+    currentIndex = index;
+
+    document.getElementById("horizontalContainer")
+      .style.transform = `translateX(-${index * 100}vw)`;
+  }
+
+  function nextSection() {
+    goToSection(currentIndex + 1);
+  }
+
+  function prevSection() {
+    goToSection(currentIndex - 1);
+  }
+
+  function smoothScroll(targetId) {
+    const index = sections.indexOf(targetId);
+    if (index !== -1) goToSection(index);
+  }
+</script>
+
+</body>
+
+
+</html>
